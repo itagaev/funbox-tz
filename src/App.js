@@ -15,7 +15,7 @@ const App = () => {
   };
 
   return (
-    <div className="container">8
+    <div className="container">
       <h1 className="header">Ты сегодня покормил кота?</h1>
       <div className="cards">
         {catFoods.map((catFood) => (
