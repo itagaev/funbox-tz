@@ -1,13 +1,44 @@
 import React from "react";
 
-import "./card.css";
+import "./css/card.css";
 
-export const Card = ({ catFood }) => {
-  const { taste, content, weight, description } = catFood;
+export const Card = ({ catFood, onBuyClicked }) => {
+  const {
+    id,
+    taste,
+    content,
+    weight,
+    description,
+    choosed,
+    available,
+  } = catFood;
+
+  const getCardClass = (block) => {
+    if (!available) return block + " not-available";
+    return choosed ? block + " choosed" : block + " available";
+  };
+
+  const renderFooterText = () => {
+    if (!available)
+      return (
+        <p style={{ color: "#FFFF66" }}>Печалька, с {taste} закончился.</p>
+      );
+
+    return choosed === false ? (
+      <p>
+        Чего сидишь? Порадуй котэ,{" "}
+        <span className="buy-text" onClick={() => onBuyClicked(id)}>
+          купи.
+        </span>
+      </p>
+    ) : (
+      description
+    );
+  };
 
   return (
     <div>
-      <div className="card">
+      <div className={getCardClass("card")} onClick={() => onBuyClicked(id)}>
         <div className="info">
           <p className="subtitle">Сказачное заморское яство</p>
           <h2 className="title bold">Нямушка</h2>
@@ -22,7 +53,7 @@ export const Card = ({ catFood }) => {
             в подарок {content.addInfo ? content.addInfo : ""}
           </p>
         </div>
-        <div className="weight">
+        <div className={getCardClass("weight")}>
           <h2>
             {weight}
             <br />
@@ -30,7 +61,7 @@ export const Card = ({ catFood }) => {
           </h2>
         </div>
       </div>
-      <div className="footer">{description}</div>
+      <div className="footer">{renderFooterText()}</div>
     </div>
   );
 };

@@ -1,6 +1,6 @@
-export const catFoods = [
+export const mockCatFoods = [
   {
-    id: 1,
+    id: 0,
     taste: "фуа-гра",
     content: {
       portionCnt: 10,
@@ -8,9 +8,11 @@ export const catFoods = [
     },
     weight: 0.5,
     description: "Печень утки разварная с артишоками.",
+    choosed: false,
+    available: true,
   },
   {
-    id: 2,
+    id: 1,
     taste: "рыбой",
     content: {
       portionCnt: 40,
@@ -18,9 +20,11 @@ export const catFoods = [
     },
     weight: 2,
     description: "Головы щучьи с чесноком да свежайшая сёмгушка.",
+    choosed: false,
+    available: true,
   },
   {
-    id: 3,
+    id: 2,
     taste: "курой",
     content: {
       portionCnt: 100,
@@ -29,5 +33,7 @@ export const catFoods = [
     },
     weight: 5,
     description: "Филе из цыплят с трюфелями в бульоне.",
+    choosed: false,
+    available: false,
   },
 ];

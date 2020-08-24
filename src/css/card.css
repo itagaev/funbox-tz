@@ -5,11 +5,27 @@
   max-width: 320px;
   background-size: 100%;
   background: linear-gradient(135deg, black 30px, transparent 0),
-    url(images/cat.jpg);
-  border: 3px solid #2ea8e6;
+    url(../images/cat.jpg);
   padding: 20px 40px 20px 40px;
   margin: auto;
   margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.available {
+  border: 5px solid #2ea8e6;
+  background-color: #2ea8e6;
+}
+
+.not-available {
+  border: 5px solid #979797;
+  background-color: #979797;
+  filter: blur(2px);
+}
+
+.choosed {
+  border: 5px solid #e52e7a;
+  background-color: #e52e7a;
 }
 
 .subtitle {
@@ -50,7 +66,6 @@
   margin-left: auto;
   width: 75px;
   height: 75px;
-  background-color: #2ea8e6;
   border-radius: 50%;
 }
 
@@ -67,4 +82,11 @@
   margin: auto;
   font-size: 13px;
   text-align: center;
+}
+
+.buy-text {
+  cursor: pointer;
+  text-decoration: none;
+  border-bottom: 1px dashed #2ea8e6;
+  color: #2ea8e6;
 }
