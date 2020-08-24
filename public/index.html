@@ -3,18 +3,35 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <style>
       * {
         box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      @font-face {
+        font-family: ExoThin;
+        src: url(./font.otf);
       }
 
       body {
-        margin: 0;
+        font-family: ExoThin;
         background: url(./background.png);
         background-size: 100%;
+        height: 100%;
+        width: 100%;
+      }
+
+      #root {
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     </style>
-    <title>React App</title>
+    <title>Funbox TZ</title>
+    <link rel="preload" href="background.png" as="image" />
   </head>
   <body>
     <div id="root"></div>
