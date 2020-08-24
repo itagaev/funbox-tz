@@ -1,2 +1,0 @@
-(this["webpackJsonpfunbox-tz"]=this["webpackJsonpfunbox-tz"]||[]).push([[0],{3:function(e,t,n){e.exports=n(8)},8:function(e,t,n){"use strict";n.r(t);var r=n(0),o=n.n(r),u=n(2);var c=function(){return o.a.createElement("div",null,"App")};Object(u.render)(o.a.createElement(c,null),document.getElementById("root"))}},[[3,1,2]]]);
-//# sourceMappingURL=main.1d33c7c9.chunk.js.map
